@@ -39,7 +39,7 @@ console.log('This is the third list: ')
 itemAssociation3.forEach(el => console.log(el));
 
 // Sorting function that return the single longest recommendation list
-function sorting(arr) {
+function maxItemAssociation(arr) {
     // a temp variable to count the switch
     let count = 0;
 
@@ -78,9 +78,9 @@ function sorting(arr) {
     return longest;
 }
 
-const answer = sorting(itemAssociation);
-const answer2 = sorting(itemAssociation2);
-const answer3 = sorting(itemAssociation3);
+const answer = maxItemAssociation(itemAssociation);
+const answer2 = maxItemAssociation(itemAssociation2);
+const answer3 = maxItemAssociation(itemAssociation3);
 
 console.log('The longest item association for the 1st list is ');
 console.log(answer);
