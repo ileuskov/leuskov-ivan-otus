@@ -6,7 +6,7 @@ const itemAssociation = [
     ['Item2', 'Item8'],
     ['Item7', 'Item8'],
 ];
-/*2 possible answers : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]; 
+/* 2 possible answers : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]; 
 The first one will be chosen since the lists are sorted in the alphabetical order */
 const itemAssociation2 = [
     ['Item1', 'Item2'],
@@ -38,9 +38,9 @@ itemAssociation2.forEach(el => console.log(el));
 console.log('This is the third list: ')
 itemAssociation3.forEach(el => console.log(el));
 
-// Sorting function that return the single longest recommendation list
+// Sorting function that returns the single longest recommendation list
 function maxItemAssociation(arr) {
-    // a temp variable to count the switch
+    // a temp variable to count the iterator for the whole function
     let count = 0;
 
     // Iterating through the whole list
@@ -49,7 +49,9 @@ function maxItemAssociation(arr) {
         // Iterating through every object after the one chosen before
         for (let j = i + 1; j < arr.length; j++) {
 
-            // If there is at least 1 value in a different array, the whole array is going to be concatenated with the chosen array. Completely identical arrays are being ignored
+            /* If there is at least 1 value in a different array that matches a value in the chose array, 
+            this array is going to be concatenated with the chosen array. 
+            Completely identical arrays are being ignored */
             if (arr[j].some(element => arr[i].includes(element)) && !arr[j].every(element2 => arr[i].includes(element2))) {
                 // concatenation of the arrays. In the end we get an array with unique values only
                 let temp = _.uniq(arr[i].concat(arr[j]));
@@ -73,7 +75,8 @@ function maxItemAssociation(arr) {
     // Sorting the array alphabetically
     arr.sort();
     arr.forEach(el => el.sort());
-    // The array is sorted alphabetically and we just get the longest one. If there more than 1 such arrays, the first in the alphabetical order will be chosen
+    /* The array is sorted alphabetically and we just get the longest one. 
+    If there are more than 1 such arrays, the first in the alphabetical order will be chosen */
     const longest = _.maxBy(arr, _.size);
     return longest;
 }
