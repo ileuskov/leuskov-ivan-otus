@@ -1,4 +1,4 @@
-/* 1 possible answer : ["Item1", "Item2", "Item7", "Item8"] */
+/* 1 longest list : ["Item1", "Item2", "Item7", "Item8"] */
 const itemAssociation = [
     ['Item1', 'Item2'],
     ['Item3', 'Item4'],
@@ -6,7 +6,7 @@ const itemAssociation = [
     ['Item2', 'Item8'],
     ['Item7', 'Item8'],
 ];
-/* 2 possible answers : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]; 
+/* 2 longest lists : ["Item1", "Item2", "Item7", "Item8"] and ["Item3", "Item4", "Item5", "Item9"]; 
 The first one will be chosen since the lists are sorted in the alphabetical order */
 const itemAssociation2 = [
     ['Item1', 'Item2'],
@@ -17,7 +17,7 @@ const itemAssociation2 = [
     ['Item4', 'Item9'],
 ];
 
-/* 2 possible solutions: ["Drinks", "Food", "Glass", "Popcorn"] and ["Phone", "ScreenProtector", "Tissue", "Water"]. 
+/* 2 longest lists: ["Drinks", "Food", "Glass", "Popcorn"] and ["Phone", "ScreenProtector", "Tissue", "Water"]. 
 The first one will be chosen since the lists are sorted in the alphabetical order */
 const itemAssociation3 = [
 
